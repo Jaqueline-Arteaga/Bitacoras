@@ -1,0 +1,195 @@
+http://localhost:8080/WORKSTATIONS/
+{
+    "description": "Project Manager"
+},
+{
+    "description": "Líder Técnico"
+},
+{
+    "description": "Líder Estratégico"
+},
+{
+    "description": "Desarrollador"
+},
+{
+    "description": "Tester"
+},
+{
+    "description": "Prueba"
+}
+
+
+http://localhost:8080/USERS/
+{
+    "name": "Cristian David",
+    "pLastName": "Ramírez",
+    "mLastName": "de la Rosa",
+    "mail": "e-cdramirez@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 1
+    }
+},
+{
+    "name": "Alberto",
+    "pLastName": "Pacheco",
+    "mLastName": "Pacheco",
+    "mail": "e-appacheco@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 2
+    }
+},
+{
+    "name": "Jaqueline",
+    "pLastName": "Arteaga",
+    "mLastName": "González",
+    "mail": "e-jarteaga@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 3
+    }
+},
+{
+    "name": "Daniel Alexis",
+    "pLastName": "Arroyo",
+    "mLastName": "Ceja",
+    "mail": "e-daarroyo@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 4
+    }
+},
+{
+    "name": "Daniel",
+    "pLastName": "Flores",
+    "mLastName": "Rivas",
+    "mail": "e-drivas@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 5
+    }
+},
+{
+    "name": "Luis Felipe",
+    "pLastName": "Rodríguez",
+    "mLastName": "Reyes",
+    "mail": "e-lfrodriguez1@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 1
+    }
+},
+{
+    "name": "Pedro Emmanuel",
+    "pLastName": "Sánchez",
+    "mLastName": "Petul",
+    "mail": "e-pesanchez@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 2
+    }
+},
+{
+    "name": "Saúl Adrián",
+    "pLastName": "Rojas",
+    "mLastName": "Reyes",
+    "mail": "e-sarojas@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 3
+    }
+},
+{
+    "name": "Prueba",
+    "pLastName": "Prueba",
+    "mLastName": "Prueba",
+    "mail": "prueba@neoris.com",
+    "password": "123456",
+    "workstation": {
+        "idWorkstation": 6
+    }
+}
+
+
+http://localhost:8080/ROLES/
+{
+    "description": "Product Owner"
+},
+{
+    "description": "Scrum Master"
+},
+{
+    "description": "Team Developer"
+}
+
+
+http://localhost:8080/PROJECTS/
+{
+    "name": "Automatización para la captura de bitácoras.",
+    "title": "Captura de Bitácoras.",
+    "description": "Los usuarios normales generarán de forma automática bitácoras llenando un formulario, y existirán usuarios especiales que auditarán la fecha de entrega de estas bitácoras.",
+    "workingHours": 8
+}
+
+
+http://localhost:8080/AREAS/
+{
+    "name": "Desarrollo"
+}
+
+
+http://localhost:8080/PROVIDERS/
+{
+    "name": "NEORIS de México S.A de C.V."
+}
+
+
+http://localhost:8080/PROJECT_MANAGER/
+{
+    "project": {
+        "idProject": 1
+    },
+    "user": {
+        "idUser": 6
+    },
+    "role": {
+        "idRole": 2
+    }
+}
+
+
+http://localhost:8080/BINNACLES/
+{
+    "name": "Borrador"
+    "type": "Excel"
+    "archive": "Puedes dejarlo vacio"
+}
+
+
+http://localhost:8080/BINNACLES_PROJECTS/
+{
+    "project": {
+        "idProject": 1
+    },
+    "user": {
+        "idUser": 6
+    },
+    "role": {
+        "idRole": 2
+    }
+}
+
+
+http://localhost:8080/ACTIVITIES/
+{
+    "name": "CSS",
+    "workstation": {
+        "idWorkstation": 1
+    }
+}
+
+
+
+
+
