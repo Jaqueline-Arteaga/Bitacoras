@@ -11,6 +11,7 @@ import { ActivityformComponent } from './components/activityform/activityform.co
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ActivityoverviewComponent } from './components/activityoverview/activityoverview.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ActivityoverviewComponent } from './components/activityoverview/activit
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
