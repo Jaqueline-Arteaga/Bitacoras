@@ -1,1 +1,38 @@
-<p>activityform works!</p>
+<form class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row form-group mb-3">
+                <label for="title">Titulo</label>
+                <input type="text" class="form-control" id="title" placeholder="Ingrese el titulo de la actividad">
+            </div>
+            <div class="row form-group mb-3">
+                <label for="description">Descripcion</label>
+                <textarea class="form-control" id="descriptio" rows="4"></textarea>
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5">
+            <div class="row form-group mb-3">
+                <label for="involucrados">Involucrados</label>
+                <input type="text" class="form-control" id="involucrados" placeholder="Ingrese a los involucrados">
+            </div>
+            <div class="row form-group mb-3">
+                <label for="time">Tiempo</label>
+                <input type="number" class="form-control" id="time" placeholder="Ingrese el tiempo">
+            </div>
+            <div class="row mb-3">
+                <div class="col form-group">
+                    <label for="startDate">Fecha de inicio</label>
+                <input type="date" class="form-control" id="startDate" >
+                </div>
+                <div class="col form-group">
+                    <label for="finishDate">Fecha de fin</label>
+                <input type="date" class="form-control" id="finishDate" >
+                </div>
+            </div>
+            <div class="row mb-3">                
+                <div class="col"><button type="submit" class="btn btn-dark mb-2">Submit</button></div>
+            </div>
+        </div>
+    </div>
+</form>

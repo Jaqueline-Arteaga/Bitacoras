@@ -1,9 +1,9 @@
 import { BinnacleProject } from "../BinnacleProject/binnacle-project";
 
 export class Binnacle {
-    id?:number;
+    idBinnacle?:number;
     name?:string;
     type?:string;
     archive?:string;
-    binnacleProjects?:Set<BinnacleProject>;
+    binnaclesProjects?:Set<BinnacleProject>;
 }

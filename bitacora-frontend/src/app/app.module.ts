@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ActivityoverviewComponent } from './components/activityoverview/activityoverview.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivityComponent } from './pages/activity/activity.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     ActivityformComponent,
     HeaderComponent,
     ProjectsComponent,
-    ActivityoverviewComponent
+    ActivityoverviewComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,

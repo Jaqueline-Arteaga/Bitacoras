@@ -1,7 +1,7 @@
 import { User } from "../User/user";
 
 export class Workstation {
-    id?:number;
+    idWorkstation?:number;
     description?:string;
     users?:Set<User>;
 }

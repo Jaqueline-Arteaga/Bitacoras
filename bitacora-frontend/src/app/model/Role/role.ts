@@ -1,7 +1,7 @@
 import { ProjectManager } from "../ProjectManager/project-manager";
 
 export class Role {
-    id?:number;
+    idRole?:number;
     description?:string;
-    projectManagers?:Set<ProjectManager>;    
+    projectsManager?:Set<ProjectManager>;    
 }

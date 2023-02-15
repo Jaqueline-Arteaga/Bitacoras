@@ -1,5 +1,5 @@
 export class Activity {
-    id?:number;
+    idActivitie?:number;
     description?:string;
     dateStart?:Date;
     dateEnd?:Date;

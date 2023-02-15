@@ -4,7 +4,7 @@ import { Role } from "../Role/role";
 import { User } from "../User/user";
 
 export class ProjectManager {
-    id?:number;
+    idProMan?:number;
     user?:User;
     project?:Project;
     role?:Role;

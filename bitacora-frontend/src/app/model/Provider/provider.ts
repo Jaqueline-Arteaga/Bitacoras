@@ -1,7 +1,7 @@
 import { Activity } from "../Activity/activity";
 
 export class Provider {
-    id?:number;
+    idProvider?:number;
     name?:string;
     activities?:Set<Activity>;
 }
