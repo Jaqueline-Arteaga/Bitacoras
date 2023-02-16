@@ -1,1 +1,29 @@
-<p>projectform works!</p>
+<div class="form">
+
+    <h4>Registro de Proyecto</h4>
+    <p>
+        <label for="title">Titulo</label>
+        <input type="text" class="form-control" id="title" placeholder="Titulo de la actividad">
+    </p>
+    <p>
+        <label for="description">Descripcion</label>
+        <textarea class="form-control" id="description" rows="4" placeholder="Describe la actividad"></textarea>
+    </p>
+    <p>
+        <label for="involucrados">Involucrados</label>
+        <input type="text" class="form-control" id="involucrados" placeholder="Ingrese a los integrantes del equipo">
+    </p>
+    <p>
+        <label for="startDate">Fecha de inicio</label>
+        <input type="date" class="form-control" id="startDate" placeholder="currentDate | date:'yyyy-MM-dd'">
+    </p>
+    <p>
+        <label for="finishDate">Fecha de fin</label>
+        <input type="date" class="form-control" id="finishDate">
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-dark mb-2">Crear</button>
+            </td>
