@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Activity } from 'src/app/model/Activity/activity';
 
 @Component({
   selector: 'app-activityoverview',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./activityoverview.component.scss']
 })
 export class ActivityoverviewComponent {
+  @Input()
+  activities?:Set<Activity>;
 
 }

@@ -7,7 +7,7 @@ import { Project } from 'src/app/model/Project/project';
   providedIn: 'root'
 })
 export class ProjectService {
-  private url:string="http://localhost:8080/PROJECTS"
+  private url:string="http://localhost:8080/PROJECTS/"
   constructor(private http:HttpClient) { }
 
   saveProject(project:Project):Observable<Project>{
@@ -23,7 +23,7 @@ export class ProjectService {
   }
 
   updateProject(project:Project):Observable<Project>{
-    return this.http.put<Project>(this.url + `/${project.id}`,project);
+    return this.http.put<Project>(this.url + `/${project.idProject}`,project);
   }
 
   deleteProject(id:number):Observable<Project>{

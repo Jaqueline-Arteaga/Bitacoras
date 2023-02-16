@@ -23,7 +23,7 @@ export class ProviderService {
   }
 
   updateProvider(provider:Provider):Observable<Provider>{
-    return this.http.put<Provider>(this.url + `/${provider.id}`,provider)
+    return this.http.put<Provider>(this.url + `/${provider.idProvider}`,provider)
   }
 
   deleteProvider(id:number):Observable<Provider>{

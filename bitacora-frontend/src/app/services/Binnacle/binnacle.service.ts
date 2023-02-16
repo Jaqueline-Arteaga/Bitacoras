@@ -23,7 +23,7 @@ export class BinnacleService {
   }
 
   updateBinnacle(binnacle:Binnacle):Observable<Binnacle>{
-    return this.http.put<Binnacle>(this.url+`/${binnacle.id}`,binnacle);
+    return this.http.put<Binnacle>(this.url+`/${binnacle.idBinnacle}`,binnacle);
   }
 
   deleteBinnacle(id:number):Observable<Binnacle>{

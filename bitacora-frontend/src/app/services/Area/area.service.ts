@@ -23,7 +23,7 @@ export class AreaService {
   }
 
   updateArea(area?:Area):Observable<Area>{
-    return this.http.put<Area>(this.url+`/${area?.id}`,area);
+    return this.http.put<Area>(this.url+`/${area?.idArea}`,area);
   }
 
   deleteArea(id?:number):Observable<Area>{

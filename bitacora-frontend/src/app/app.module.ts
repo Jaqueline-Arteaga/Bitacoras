@@ -13,6 +13,9 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ActivityoverviewComponent } from './components/activityoverview/activityoverview.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivityComponent } from './pages/activity/activity.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { ProjectformComponent } from './components/projectform/projectform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { ActivityComponent } from './pages/activity/activity.component';
     HeaderComponent,
     ProjectsComponent,
     ActivityoverviewComponent,
-    ActivityComponent
+    ActivityComponent,
+    ProjectComponent,
+    ProjectformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

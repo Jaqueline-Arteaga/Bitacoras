@@ -1,62 +1,18 @@
 <table class="table">
     <thead class="thead-dark">
       <tr>        
-        <th scope="col">Titulo</th>
-        <th scope="col">Area</th>
-        <th scope="col">Responsable</th>
-        <th scope="col">Fecha inicio</th>
-        <th scope="col">Fecha fin</th>
-        <th scope="col">Estado</th>
+        <th scope="col">Descripción</th>        
+        <th scope="col">Fecha de inicio</th>
+        <th scope="col">Fecha de fin</th>
+        <th scope="col">Horas laborales</th>        
       </tr>
     </thead>
     <tbody>
-      <tr>        
-        <td>Titulo proyecto</td>
-        <td>Business</td>
-        <td>Baby koopa</td>
-        <td>24/11/2023</td>
-        <td>30/11/2023</td>
-        <td>En proceso</td>
-      </tr>
-      <tr>        
-        <td>Titulo proyecto</td>
-        <td>Business</td>
-        <td>Baby koopa</td>
-        <td>24/11/2023</td>
-        <td>30/11/2023</td>
-        <td>En proceso</td>
-      </tr>
-      <tr>        
-        <td>Titulo proyecto</td>
-        <td>Business</td>
-        <td>Baby koopa</td>
-        <td>24/11/2023</td>
-        <td>30/11/2023</td>
-        <td>En proceso</td>
-      </tr>
-      <tr>        
-        <td>Titulo proyecto</td>
-        <td>Business</td>
-        <td>Baby koopa</td>
-        <td>24/11/2023</td>
-        <td>30/11/2023</td>
-        <td>En proceso</td>
-      </tr>
-      <tr>        
-        <td>Titulo proyecto</td>
-        <td>Business</td>
-        <td>Baby koopa</td>
-        <td>24/11/2023</td>
-        <td>30/11/2023</td>
-        <td>En proceso</td>
-      </tr>
-      <tr>        
-        <td>Titulo proyecto</td>
-        <td>Business</td>
-        <td>Baby koopa</td>
-        <td>24/11/2023</td>
-        <td>30/11/2023</td>
-        <td>En proceso</td>
-      </tr>      
+      <tr *ngFor="let activity of activities">        
+        <td>{{activity.description}}</td>
+        <td>{{activity.dateStart}}</td>
+        <td>{{activity.dateEnd}}</td>
+        <td>{{activity.workingHours}}</td>               
+      </tr>          
     </tbody>
   </table>

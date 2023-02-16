@@ -23,7 +23,7 @@ export class UserService {
   }
 
   updateUser(user:User):Observable<User>{
-    return this.http.put<User>(this.url + `/${user.id}`,user);
+    return this.http.put<User>(this.url + `/${user.idUser}`,user);
   }
 
   deleteUser(id:number):Observable<User>{
