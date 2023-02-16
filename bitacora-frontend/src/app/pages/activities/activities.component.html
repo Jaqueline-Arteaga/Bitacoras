@@ -1,5 +1,11 @@
 <app-header></app-header>
 <div class="container">
     <h1>Actividades</h1>
+    <div class="card text-center mt-3" style="width: 18rem;">
+        <a [routerLink]="['/binnacle/activity']" class="btn btn-light">
+            Nueva actividad
+            <img src="assets/img/projects/plus-math.png" width="20rem" alt="">
+        </a>
+    </div>
     <app-activityoverview [activities]="activities"></app-activityoverview>
 </div>

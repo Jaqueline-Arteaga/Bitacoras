@@ -10,7 +10,7 @@ export class ProjectService {
   private url:string="http://localhost:8080/PROJECTS/"
   constructor(private http:HttpClient) { }
 
-  saveProject(project:Project):Observable<Project>{
+  saveProject(project?:Project):Observable<Project>{
     return this.http.post<Project>(this.url,project);
   }
 

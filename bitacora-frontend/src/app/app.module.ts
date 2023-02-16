@@ -13,6 +13,8 @@ import { ActivityoverviewComponent } from './components/activityoverview/activit
 import { HttpClientModule } from '@angular/common/http';
 import { ActivityComponent } from './pages/activity/activity.component';
 import { FormsModule } from '@angular/forms';
+import { ProjectComponent } from './pages/project/project.component';
+import { ProjectformComponent } from './components/projectform/projectform.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     ProjectsComponent,
     ActivityoverviewComponent,
-    ActivityComponent
+    ActivityComponent,
+    ProjectComponent,
+    ProjectformComponent
   ],
   imports: [
     BrowserModule,

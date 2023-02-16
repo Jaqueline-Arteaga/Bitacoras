@@ -1,10 +1,15 @@
 <app-header></app-header>
 <div class="container">
+    <div class="card text-center mt-3" style="width: 18rem;">
+        <a [routerLink]="['/binnacle/project']" class="btn btn-light">
+            Nuevo Proyecto
+            <img src="assets/img/projects/plus-math.png" width="20rem" alt="">
+        </a>
+    </div>
+
     <div class="row mt-3">
-        
         <div class="col mb-3" *ngFor="let project of projects">
-            
             <app-projectcard [project]="project"></app-projectcard>
-        </div>        
+        </div>
     </div>
 </div>
