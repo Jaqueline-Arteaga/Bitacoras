@@ -2,11 +2,11 @@ import { BinnacleProject } from "../BinnacleProject/binnacle-project";
 import { ProjectManager } from "../ProjectManager/project-manager";
 
 export class Project {
-    idProject?:number;
-    name?:string;
+    idProject?:number;    
     title?:string;
     description?:string;
-    workingHours?:number;
+    dateStart?:Date;
+    dateEnd?:Date;
     projectsManager?:Set<ProjectManager>;
     binnaclesProjects?:Set<BinnacleProject>;
 }

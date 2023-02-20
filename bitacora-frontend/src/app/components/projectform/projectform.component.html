@@ -1,9 +1,5 @@
 <form method="post" class="container w-75">
-
-    <div class="row form-group mb-3 ">
-        <label for="name">Nombre del proyecto</label>
-        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="project!.name" placeholder="Ingrese el nombre del proyecto">
-    </div>
+    
 
     <div class="row form-group mb-3">
         <label for="title">Titulo del proyecto</label>
@@ -15,11 +11,18 @@
         <textarea class="form-control" id="description" name="description" [(ngModel)]="project!.description" rows="4"></textarea>
     </div>
 
+    <div class="row form-group mb-3">
+        <label for="dateStart">Fecha de inicio</label>
+        <input type="date" class="form-control" id="dateStart" name="dateStart" [(ngModel)]="project!.dateStart">
+    </div>
 
     <div class="row form-group mb-3">
-        <label for="workingHours">Tiempo</label>
-        <input type="number" class="form-control" id="workingHours" name="workingHours" [(ngModel)]="project!.workingHours"  placeholder="Ingrese el tiempo">
+        <label for="dateEnd">Fecha de fin</label>
+        <input type="date" class="form-control" id="dateEnd" name="dateEnd" [(ngModel)]="project!.dateEnd">
     </div>
+
+
+    
 
     <div class="row mb-3">                
         <div class="col"><button type="submit" (click)="create()" class="btn btn-dark mb-2">Crear</button></div>

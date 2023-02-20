@@ -1,18 +1,17 @@
-<table class="table">
-    <thead class="thead-dark">
-      <tr>        
-        <th scope="col">Descripción</th>        
-        <th scope="col">Fecha de inicio</th>
-        <th scope="col">Fecha de fin</th>
-        <th scope="col">Horas laborales</th>        
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let activity of activities">        
-        <td>{{activity.description}}</td>
-        <td>{{activity.dateStart}}</td>
-        <td>{{activity.dateEnd}}</td>
-        <td>{{activity.workingHours}}</td>               
-      </tr>          
-    </tbody>
-  </table>
+<div class="d-flex justify-content-around ">
+  <div class="h5">Nombre</div>
+  <div class="h5">Descripción</div>
+  <div class="h5">Inicio</div>
+  <div class="h5">Fin</div>
+  <div class="h5">Estado</div>
+</div>
+
+<div class="btn btn-light d-flex justify-content-around " *ngFor="let activity of activities" [routerLink]="['/binnacle/activity',activity!.idActivitie]">
+
+  <span>{{activity.name}}</span>
+  <span>{{activity.description}}</span>
+  <span>{{activity.dateStart}}</span>
+  <span>{{activity.dateEnd}}</span>
+  <span>{{"Activo"}}</span>
+
+</div>

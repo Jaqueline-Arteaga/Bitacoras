@@ -1,31 +1,42 @@
 <form method="post" class="container">
     <div class="row">
-        <div class="col-6">            
+        <div class="col-6">
+            <div class="row form-group mb-3">
+                <label for="name">Nombre de la actividad</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="activity!.name" placeholder="Ingrese el nombre de la actividad">
+            </div>
+            
             <div class="row form-group mb-3">
                 <label for="description">Descripcion</label>
-                <textarea class="form-control" id="description" name="description" [(ngModel)]="activity!.description" rows="4"></textarea>
+                <textarea class="form-control" id="description" name="description" [(ngModel)]="activity!.description"
+                    rows="4"></textarea>
             </div>
         </div>
         <div class="col-1"></div>
         <div class="col-5">
-            
+
             <div class="row form-group mb-3">
                 <label for="workingHours">Tiempo</label>
-                <input type="number" class="form-control" id="workingHours" name="workingHours" [(ngModel)]="activity!.workingHours" placeholder="Ingrese el tiempo">
+                <input type="number" class="form-control" id="workingHours" name="workingHours"
+                    [(ngModel)]="activity!.workingHours" placeholder="Ingrese el tiempo">
             </div>
             <div class="row mb-3">
                 <div class="col form-group">
                     <label for="startDate">Fecha de inicio</label>
-                <input type="date" class="form-control" id="dateStart" name="dateStart" [(ngModel)]="activity!.dateStart" >
+                    <input type="date" class="form-control" id="dateStart" name="dateStart"
+                        [(ngModel)]="activity!.dateStart">
                 </div>
                 <div class="col form-group">
                     <label for="dateEnd">Fecha de fin</label>
-                <input type="date" class="form-control" id="dateEnd" name="dateEnd" [(ngModel)]="activity!.dateEnd" >
+                    <input type="date" class="form-control" id="dateEnd" name="dateEnd" [(ngModel)]="activity!.dateEnd">
                 </div>
             </div>
-            <div class="row mb-3">                
+            <div class="row mb-3" *ngIf="!activity?.idActivitie else edit">
                 <div class="col"><button type="submit" (click)="create()" class="btn btn-dark mb-2">Crear</button></div>
             </div>
+            <ng-template #edit>
+                <div class="col"><button type="submit" (click)="update()" class="btn btn-dark mb-2">Actualizar</button></div>
+            </ng-template>
         </div>
     </div>
 </form>

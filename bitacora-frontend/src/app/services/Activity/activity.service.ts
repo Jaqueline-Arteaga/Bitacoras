@@ -18,4 +18,12 @@ export class ActivityService {
     return this.http.get<Set<Activity>>(this.url);
   }
 
+  getActivityById(id:number):Observable<Activity>{
+    return this.http.get<Activity>(this.url + `${id}`);
+  }
+
+  updateActivity(activity?:Activity):Observable<Activity>{
+    return this.http.put<Activity>(this.url,activity);
+  }
+
 }
