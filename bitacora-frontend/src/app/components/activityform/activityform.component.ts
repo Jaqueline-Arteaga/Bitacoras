@@ -9,6 +9,11 @@ import { ActivityService } from 'src/app/services/Activity/activity.service';
   styleUrls: ['./activityform.component.scss']
 })
 export class ActivityformComponent {
+
+  area = ['1','2','3','4','5'];
+  dropDown = "Selecciona un Area";
+  name?:string="Project Name";
+
   activity?:Activity=new Activity();
 
   constructor(private activityService:ActivityService, private router:Router, private activatedRoute:ActivatedRoute){
