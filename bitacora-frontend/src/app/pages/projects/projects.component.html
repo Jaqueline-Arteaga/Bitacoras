@@ -9,7 +9,7 @@
 
     <div class="row mt-3">
         <div class="col mb-3" *ngFor="let project of projects">
-            <app-projectcard [project]="project"></app-projectcard>
+            <app-projectcard [project]="project" [routerLink]="['/binnacle/project',project!.idProject]"></app-projectcard>
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@ export class ProjectService {
   }
 
   getProjectById(id?:number):Observable<Project>{
-    return this.http.get<Project>(this.http +`/${id}`);
+    return this.http.get<Project>(this.url +`${id}`);
   }
 
   listProjects():Observable<Set<Project>>{
