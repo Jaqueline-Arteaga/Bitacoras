@@ -7,7 +7,7 @@ import { Binnacle } from 'src/app/model/Binnacle/binnacle';
   providedIn: 'root'
 })
 export class BinnacleService {
-  private url:string="http://localhost:8080/BINNACLES"
+  private url:string="http://localhost:8080/api/BINNACLES"
   constructor(private http:HttpClient) { }
 
   saveBinnacle(binnacle:Binnacle):Observable<Binnacle>{

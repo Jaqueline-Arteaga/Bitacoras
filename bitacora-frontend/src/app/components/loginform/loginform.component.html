@@ -2,29 +2,32 @@
     <div class="d-flex justify-content-center">
         <img src="/assets/img/loginform/NEORIS_Logo.jpg" alt="login-icon" style="height: 3rem">
     </div>
-    <div class="text-center fs-1 fw-bold">Login</div>
-    <div class="input-group mt-4">
-        <div class="input-group-text bg-dark">
-            <img src="/assets/img/loginform/username-icon.svg" alt="username-icon" style="height: 1rem">
+
+    <form action="post" #form="ngForm" (ngSubmit)="login(form)">
+        <div class="text-center fs-1 fw-bold">Login</div>
+        <div class="input-group mt-4">
+            <div class="input-group-text bg-dark">
+                <img src="/assets/img/loginform/username-icon.svg" alt="username-icon" style="height: 1rem">
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Username" name="mail" [(ngModel)]="creds!.mail">
         </div>
-        <input class="form-control bg-light" type="text" placeholder="Username">
-    </div>
-    <div class="input-group mt-1">
-        <div class="input-group-text bg-dark">
-            <img src="/assets/img/loginform/password-icon.svg" alt="password-icon" style="height: 1rem">
+        <div class="input-group mt-1">
+            <div class="input-group-text bg-dark">
+                <img src="/assets/img/loginform/password-icon.svg" alt="password-icon" style="height: 1rem">
+            </div>
+            <input class="form-control bg-light" type="password" placeholder="Password" name="password" [(ngModel)]="creds!.password">
         </div>
-        <input class="form-control bg-light" type="password" placeholder="Password">
-    </div>
-    <div class="d-flex justify-content-around mt-1">
-        <div class="d-flex align-items-center gap-1">
-            <input class="form-check-input" type="checkbox" />
-            <div class="pt-1" style="font-size: 0.9rem">Recuerdame</div>
+        <div class="d-flex justify-content-around mt-1">
+            <div class="d-flex align-items-center gap-1">
+                <input class="form-check-input" type="checkbox" />
+                <div class="pt-1" style="font-size: 0.9rem">Recuerdame</div>
+            </div>
+            <div class="pt-1">
+                <a href="#" class="text-decoration-none text-dark fw-semibold fst-italic" style="font-size: 0.9rem">Olvidaste tu contraseña</a>
+            </div>
         </div>
-        <div class="pt-1">
-            <a href="#" class="text-decoration-none text-dark fw-semibold fst-italic" style="font-size: 0.9rem">Olvidaste tu contraseña</a>
-        </div>
-    </div>
-    <div class="btn btn-dark text-white w-100 mt-4 fw-semibold shadow-sm">
-        Ingresar
-    </div>      
+        <button class="btn btn-dark text-white w-100 mt-4 fw-semibold shadow-sm">
+            Ingresar
+        </button >
+    </form>      
 </div>

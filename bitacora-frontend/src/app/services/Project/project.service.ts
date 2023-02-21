@@ -7,7 +7,7 @@ import { Project } from 'src/app/model/Project/project';
   providedIn: 'root'
 })
 export class ProjectService {
-  private url:string="http://localhost:8080/PROJECTS/"
+  private url:string="http://localhost:8080/api/PROJECTS/"
   constructor(private http:HttpClient) { }
 
   saveProject(project?:Project):Observable<Project>{

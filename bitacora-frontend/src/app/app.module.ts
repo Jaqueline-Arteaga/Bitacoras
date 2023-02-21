@@ -10,12 +10,13 @@ import { ActivityformComponent } from './components/activityform/activityform.co
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ActivityoverviewComponent } from './components/activityoverview/activityoverview.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ActivityComponent } from './pages/activity/activity.component';
 import { FormsModule } from '@angular/forms';
 import { ProjectComponent } from './pages/project/project.component';
 import { ProjectformComponent } from './components/projectform/projectform.component';
 import { ThisprojectComponent } from './pages/thisproject/thisproject.component';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { ThisprojectComponent } from './pages/thisproject/thisproject.component'
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

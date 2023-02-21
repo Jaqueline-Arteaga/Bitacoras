@@ -7,7 +7,7 @@ import { Area } from 'src/app/model/Area/area';
   providedIn: 'root'
 })
 export class AreaService {
-  private url:string="http://localhost:8080/AREAS"
+  private url:string="http://localhost:8080/api/AREAS"
   constructor(private http:HttpClient) { }
 
   saveArea(area?:Area):Observable<Area>{

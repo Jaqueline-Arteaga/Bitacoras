@@ -7,7 +7,7 @@ import { User } from 'src/app/model/User/user';
   providedIn: 'root'
 })
 export class UserService {
-  private url:string="http://localhost:8080/USERS"
+  private url:string="http://localhost:8080/api/USERS"
   constructor(private http:HttpClient) { }
 
   saveUser(user:User):Observable<User>{
