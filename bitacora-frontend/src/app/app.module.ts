@@ -17,6 +17,8 @@ import { ProjectComponent } from './pages/project/project.component';
 import { ProjectformComponent } from './components/projectform/projectform.component';
 import { ThisprojectComponent } from './pages/thisproject/thisproject.component';
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { UserformComponent } from './components/userform/userform.component';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     ActivityComponent,
     ProjectComponent,
     ProjectformComponent,
-    ThisprojectComponent
+    ThisprojectComponent,
+    UserformComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

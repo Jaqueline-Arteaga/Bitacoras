@@ -7,6 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ThisprojectComponent } from './pages/thisproject/thisproject.component';
+import { UserComponent } from './pages/user/user.component';
+
 
 const routes: Routes = [
   {path:"binnacle/login",component:LoginComponent},
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path:"binnacle/project/:idProject",component:ThisprojectComponent,canActivate: [AuthGuard]},
   {path:"binnacle/activities",component:ActivitiesComponent,canActivate: [AuthGuard]},
   {path:"binnacle/activity",component:ActivityComponent,canActivate: [AuthGuard]},
-  {path:"binnacle/activity/:idActivitie",component:ActivityComponent,canActivate: [AuthGuard]}
+  {path:"binnacle/activity/:idActivitie",component:ActivityComponent,canActivate: [AuthGuard]},
+  {path:"binnacle/user",component:UserComponent,canActivate: [AuthGuard]}
 
 ];
 

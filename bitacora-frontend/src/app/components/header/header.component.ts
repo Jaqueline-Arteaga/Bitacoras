@@ -11,7 +11,20 @@ export class HeaderComponent {
 
   constructor(private router: Router) {
   }
-  formActivity() {
+  goToProjects() {
+    this.router.navigateByUrl("/binnacle/projects");
+  }
+  goToActivities() {
+    this.router.navigateByUrl("/binnacle/activities");
+  }
+  goToFormProjects() {
+    this.router.navigateByUrl("/binnacle/project");
+  }
+  goToFormActivity() {
     this.router.navigateByUrl("/binnacle/activity");
   }
+  goToFormUsers() {
+    this.router.navigateByUrl("/binnacle/user");
+  }
+
 }
