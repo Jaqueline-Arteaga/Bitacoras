@@ -18,6 +18,7 @@ import { ProjectformComponent } from './components/projectform/projectform.compo
 import { ThisprojectComponent } from './pages/thisproject/thisproject.component';
 import { AuthInterceptor } from './helpers/auth.interceptor';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass: AuthInterceptor, multi: true}
+    
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
 export class Credential {
-    mail?:string;
+    mail!:string;
     password?:string;
 }

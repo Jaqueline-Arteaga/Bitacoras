@@ -19,12 +19,19 @@ export class AuthenticatorService {
       const headers = response.headers;
       const bearerToken = headers.get('Authorization')!;
       const token = bearerToken.replace('Bearer ','');
-      localStorage.setItem('token',token);
+      
+      window.sessionStorage.setItem('token',token);
+      window.sessionStorage.setItem('correo',creds!.mail);
       return body;
     }));
   }
 
   getToken(){
-    return localStorage.getItem('token');
+    return window.sessionStorage.getItem('token');
   }
+
+  logout(){
+    window.sessionStorage.removeItem('token');
+  }
+
 }

@@ -10,6 +10,7 @@ import { ThisprojectComponent } from './pages/thisproject/thisproject.component'
 
 const routes: Routes = [
   {path:"binnacle/login",component:LoginComponent},
+  {path:"",component:LoginComponent},
   {path:"binnacle/projects",component:ProjectsComponent,canActivate: [AuthGuard]},
   {path:"binnacle/project",component:ProjectComponent,canActivate: [AuthGuard]},
   {path:"binnacle/project/:idProject",component:ThisprojectComponent,canActivate: [AuthGuard]},

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import { AuthenticatorService } from 'src/app/services/Authenticator/authenticator.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,14 @@ import {Router} from "@angular/router";
 export class HeaderComponent {
   name?:string="Dumy name";
 
-  constructor(private router: Router) {
+  constructor(private log:AuthenticatorService,private router: Router) {
   }
   formActivity() {
     this.router.navigateByUrl("/binnacle/activity");
+  }
+
+  logout(){
+    this.log.logout();
+    this.router.navigate(["/binnacle/login"]);
   }
 }
