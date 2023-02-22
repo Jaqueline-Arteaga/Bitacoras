@@ -12,12 +12,28 @@ export class HeaderComponent {
 
   constructor(private log:AuthenticatorService,private router: Router) {
   }
-  formActivity() {
+  goToProjects() {
+    this.router.navigateByUrl("/binnacle/projects");
+  }
+  goToActivities() {
+    this.router.navigateByUrl("/binnacle/activities");
+  }
+  goToFormProjects() {
+    this.router.navigateByUrl("/binnacle/project");
+  }
+  goToFormActivity() {
     this.router.navigateByUrl("/binnacle/activity");
   }
+
 
   logout(){
     this.log.logout();
     this.router.navigate(["/binnacle/login"]);
   }
+
+  goToFormUsers() {
+    this.router.navigateByUrl("/binnacle/user");
+  }
+
+
 }

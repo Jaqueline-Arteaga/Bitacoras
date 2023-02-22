@@ -1,0 +1,44 @@
+<div class="form">
+
+<form method="post" class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row form-group mb-3">
+                <label for="name">Nombre</label>
+                <input type="text" ngModel required class="form-control" id="name" name="name" [(ngModel)]="user!.name" placeholder="Ingrese el nombre">
+            </div>
+            
+            <div class="row form-group mb-3">
+                <label for="description">Apellido Paterno</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user!.pLastName" placeholder="Ingrese el apellido paterno">
+            </div>
+
+            <div class="row form-group mb-3">
+                <label for="description">Apellido Materno</label>
+                <input type="text" class="form-control" id="" name="name" [(ngModel)]="user!.mLastName" placeholder="Ingrese el apellido materno">
+            </div>
+
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5">
+
+            <div class="row form-group mb-3">
+                <label for="mail">Correo</label>
+                <input type="mail" class="form-control" id="mail" name="mail"
+                    [(ngModel)]="user!.mail" placeholder="Ingrese el correo">
+            </div>
+            <div class="row form-group mb-3">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password"
+                    [(ngModel)]="user!.password" placeholder="Ingrese el password">
+            </div>
+
+            <div class="row mb-3" *ngIf="!user?.idUser">
+                <div class="col"><button type="submit" (click)="create()" class="btn btn-dark mb-2">Crear</button></div>
+            </div>
+                
+        </div>
+        
+    </div>
+</form>
+</div>

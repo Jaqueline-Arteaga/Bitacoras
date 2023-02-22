@@ -20,7 +20,7 @@ export class LoginformComponent {
     console.log('form value',form.value)    
     this.log.login(this.creds)
     .subscribe(response=>{
-      this.router.navigate(['/binnacle/activities'])
+      this.router.navigate(['/binnacle/projects'])
     })
 
   }
