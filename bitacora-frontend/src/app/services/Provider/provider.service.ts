@@ -7,7 +7,7 @@ import { Provider } from 'src/app/model/Provider/provider';
   providedIn: 'root'
 })
 export class ProviderService {
-  private url:string="http://localhost:8080/api/PROVIDERS"
+  private url:string="http://localhost:8081/api/PROVIDERS"
   constructor(private http:HttpClient) { }
 
   saveProvider(provider:Provider):Observable<Provider>{

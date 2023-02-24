@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 export class AuthenticatorService {
 
   constructor(private http:HttpClient) { }
-  private url:string="http://localhost:8080/login";
+  private url:string="http://localhost:8081/login";
 
   login(creds: Credential){
     return this.http.post(this.url,creds,{
@@ -21,7 +21,7 @@ export class AuthenticatorService {
       const token = bearerToken.replace('Bearer ','');
       
       window.sessionStorage.setItem('token',token);
-      window.sessionStorage.setItem('correo',creds!.mail);
+      window.sessionStorage.setItem('user',creds!.mail);
       return body;
     }));
   }
@@ -32,6 +32,7 @@ export class AuthenticatorService {
 
   logout(){
     window.sessionStorage.removeItem('token');
+    window.sessionStorage.removeItem('correo');
   }
 
 }

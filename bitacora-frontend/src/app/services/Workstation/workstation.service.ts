@@ -7,7 +7,7 @@ import { Workstation } from 'src/app/model/Workstation/workstation';
   providedIn: 'root'
 })
 export class WorkstationService {
-  private url:string="http://localhost:8080/api/WORKSTATIONS"
+  private url:string="http://localhost:8081/api/WORKSTATIONS"
   constructor(private http:HttpClient) { }
 
   saveWorkstation(workStation:Workstation):Observable<Workstation>{

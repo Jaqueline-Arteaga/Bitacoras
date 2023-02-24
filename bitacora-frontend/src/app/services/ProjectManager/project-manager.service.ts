@@ -7,7 +7,7 @@ import { ProjectManager } from 'src/app/model/ProjectManager/project-manager';
   providedIn: 'root'
 })
 export class ProjectManagerService {
-  private url:string="http://localhost:8080/api/PROJECT_MANAGER"
+  private url:string="http://localhost:8081/api/PROJECT_MANAGER"
   constructor(private http:HttpClient) { }
 
   saveProjectAssignment(projectManager:ProjectManager):Observable<ProjectManager>{
