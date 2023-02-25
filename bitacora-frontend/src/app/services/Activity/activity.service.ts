@@ -7,7 +7,7 @@ import { Activity } from 'src/app/model/Activity/activity';
   providedIn: 'root'
 })
 export class ActivityService {
-  private url:string="http://localhost:8080/api/ACTIVITIES/"
+  private url:string="http://localhost:8081/api/ACTIVITIES/"
   constructor(private http:HttpClient) { }
 
   saveActivity(activity?:Activity):Observable<Activity>{

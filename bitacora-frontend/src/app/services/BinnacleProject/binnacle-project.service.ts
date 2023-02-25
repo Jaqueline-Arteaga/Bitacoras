@@ -7,7 +7,7 @@ import { BinnacleProject } from 'src/app/model/BinnacleProject/binnacle-project'
   providedIn: 'root'
 })
 export class BinnacleProjectService {
-  private url:string="http://localhost:8080/api/BINNACLES_PROJECTS"
+  private url:string="http://localhost:8081/api/BINNACLES_PROJECTS"
   constructor(private http:HttpClient) { }
 
   saveBinnacleProject(binnacleProject:BinnacleProject):Observable<BinnacleProject>{
