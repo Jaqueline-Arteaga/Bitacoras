@@ -35,6 +35,18 @@ export class ActivityformComponent {
     )
   }
 
+  delete():void{
+    this.activatedRoute.params.subscribe(
+      activity=>{
+        let idActivitie:number=activity['idActivitie'];
+
+        this.activityService.deleteActivitie(idActivitie).subscribe(
+          ()=>this.router.navigate(["/binnacle/activities"])
+        )
+      } 
+    )
+  }
+
   cargar():void{
     this.activatedRoute.params.subscribe(
       activity=>{
@@ -49,4 +61,5 @@ export class ActivityformComponent {
       }
     )
   }
+
 }

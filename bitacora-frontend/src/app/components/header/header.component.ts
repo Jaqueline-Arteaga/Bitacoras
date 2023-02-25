@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import { AuthenticatorService } from 'src/app/services/Authenticator/authenticator.service';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,19 +13,6 @@ export class HeaderComponent {
 
   constructor(private log:AuthenticatorService,private router: Router) {
   }
-  goToProjects() {
-    this.router.navigateByUrl("/binnacle/projects");
-  }
-  goToActivities() {
-    this.router.navigateByUrl("/binnacle/activities");
-  }
-  goToFormProjects() {
-    this.router.navigateByUrl("/binnacle/project");
-  }
-  goToFormActivity() {
-    this.router.navigateByUrl("/binnacle/activity");
-  }
-
 
   logout(){
     this.log.logout();
