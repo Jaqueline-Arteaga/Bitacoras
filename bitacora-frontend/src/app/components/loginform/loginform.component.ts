@@ -10,17 +10,16 @@ import { AuthenticatorService } from 'src/app/services/Authenticator/authenticat
   styleUrls: ['./loginform.component.scss']
 })
 export class LoginformComponent {
-
-  creds:Credential={mail:'',password:''};
+  creds:Credential={email:'',password:''};
+  
   constructor(private log:AuthenticatorService,private router:Router){
 
   }
 
-  login(form: NgForm){
-    console.log('form value',form.value)    
+  login(form: NgForm){       
     this.log.login(this.creds)
     .subscribe(response=>{
-      this.router.navigate(['/binnacle/projects'])
+      this.router.navigate(['/projects'])
     })
 
   }

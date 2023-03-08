@@ -30,5 +30,9 @@ export class ProjectService {
     return this.http.delete<Project>(this.url + `/${id}`)
   }
 
+  getProjectByUser(email:string):Observable<Set<Project>>{
+    return this.http.get<Set<Project>>(this.url+`USERPROJECTS/${email}`);
+  }
+
 
 }

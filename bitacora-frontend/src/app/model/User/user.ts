@@ -1,13 +1,16 @@
-import { ProjectManager } from "../ProjectManager/project-manager";
-import { Workstation } from "../Workstation/workstation";
+import { Area } from "../Area/area";
+import { ProjectUser } from "../ProjectUser/project-user";
+
 
 export class User {
     idUser?:number;
     name?:string;
     pLastName?:string;
     mLastName?:string;
-    mail?:string;
+    email?:string;
     password?:string;
-    workstation?:Workstation;
-    projectsManager?:Set<ProjectManager>;    
+    hoursWorking?:number;
+    area?:Area;  
+    projectsUser?:Set<ProjectUser>; 
+
 }

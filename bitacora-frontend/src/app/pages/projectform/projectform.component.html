@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <h1>Nuevo Proyecto 😼</h1>
+    <form method="post" class="container shadow mt-5 p-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="row form-group mb-3">
+                    <label for="title">Titulo del proyecto</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Ingrese el titulo del proyecto">
+                </div>
+
+                <div class="row form-group mb-3">
+                    <label for="description">Descripcion</label>
+                    <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5">
+                <div class="row form-group mb-3">
+                    <label for="dateStart">Fecha de inicio</label>
+                    <input type="date" class="form-control" id="dateStart" name="dateStart">
+                </div>
+
+                <div class="row form-group mb-3">
+                    <label for="dateEnd">Fecha de fin</label>
+                    <input type="date" class="form-control" id="dateEnd" name="dateEnd">
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col"><button type="submit"  class="btn btn-dark mb-2">Crear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

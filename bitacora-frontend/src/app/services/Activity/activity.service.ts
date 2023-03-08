@@ -17,6 +17,7 @@ export class ActivityService {
   listActivity():Observable<Set<Activity>>{
     return this.http.get<Set<Activity>>(this.url);
   }
+ 
 
   getActivityById(id:number):Observable<Activity>{
     return this.http.get<Activity>(this.url + `${id}`);

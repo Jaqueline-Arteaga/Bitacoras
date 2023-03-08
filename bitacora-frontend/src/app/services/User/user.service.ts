@@ -19,7 +19,7 @@ export class UserService {
   }
 
   getUserById(id:number):Observable<User>{
-    return this.http.get<User>(this.url + `/${id}`)
+    return this.http.get<User>(this.url + `${id}`)
   }
 
   listUsers():Observable<Set<User>>{
@@ -27,11 +27,15 @@ export class UserService {
   }
 
   updateUser(user:User):Observable<User>{
-    return this.http.put<User>(this.url + `/${user.idUser}`,user);
+    return this.http.put<User>(this.url + `${user.idUser}`,user);
   }
 
   deleteUser(id:number):Observable<User>{
-    return this.http.delete<User>(this.url + `/${id}`)
+    return this.http.delete<User>(this.url + `${id}`)
+  }
+
+  getUserByEmail(email:string):Observable<User>{
+    return this.http.get<User>(this.url +"email/"+ email)
   }
 
 }

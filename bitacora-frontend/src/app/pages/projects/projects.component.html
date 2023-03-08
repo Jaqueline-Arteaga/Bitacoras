@@ -1,15 +1,22 @@
-<app-header></app-header>
-<div class="container">
-    <div class="card text-center mt-3" style="width: 18rem;">
-        <a [routerLink]="['/binnacle/project']" class="btn btn-light">
-            Nuevo Proyecto
-            <img src="assets/img/projects/plus-math.png" width="20rem" alt="">
-        </a>
-    </div>
+<app-header [user]="user"></app-header>
 
-    <div class="row mt-3">
-        <div class="col mb-3" *ngFor="let project of projects">
-            <app-projectcard [project]="project" [routerLink]="['/binnacle/project',project!.idProject]"></app-projectcard>
+<div class="container">
+    <h1>Proyectos</h1>
+    <div class="bg-dark d-flex justify-content-between" >
+        <div>
+            <button type="button" class="btn btn-dark" [routerLink]="['/projectform']">Nuevo Proyecto +</button>            
+            
         </div>
+
+        <div>
+            <form>
+                <input  type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-dark" type="submit">Buscar</button>
+              </form>
+        </div>        
+    </div>
+    <div class="row" *ngFor="let project of projects">
+        <app-projectcard [project]="project" class="col-3" (click)="projectClic(project)" ></app-projectcard>        
     </div>
 </div>
+

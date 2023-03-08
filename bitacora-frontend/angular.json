@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bitacora-frontend": {
+    "frontend-bitacora": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bitacora-frontend",
+            "outputPath": "dist/frontend-bitacora",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bitacora-frontend:build:production"
+              "browserTarget": "frontend-bitacora:build:production"
             },
             "development": {
-              "browserTarget": "bitacora-frontend:build:development"
+              "browserTarget": "frontend-bitacora:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bitacora-frontend:build"
+            "browserTarget": "frontend-bitacora:build"
           }
         },
         "test": {
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "ee9d1537-a328-43bd-9b61-ffb93873d47d"
+    "analytics": "adbfa033-10bf-48fe-b041-92963f122030"
   }
 }

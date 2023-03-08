@@ -1,18 +1,15 @@
-import { Provider } from "@angular/core";
 import { Area } from "../Area/area";
-import { ProjectManager } from "../ProjectManager/project-manager";
-import { StatusActivity } from "../StatusActivity/status-activity";
+import { Dates } from "../Dates/dates";
+import { ProjectUser } from "../ProjectUser/project-user";
+
 
 export class Activity {
-    idActivitie?:number;
+    idActivity!:number;
     name?:string;
     description?:string;
     notes?:string;
-    dateStart?:Date;
-    dateEnd?:Date;
+    date?:Dates;
     workingHours?:number;
-    projectManager?:ProjectManager;
-    provider?:Provider;
-    area?:Area;
-    statusActivitie?:StatusActivity;
+    projectUser?:ProjectUser;    
+    area?:Area;    
 }

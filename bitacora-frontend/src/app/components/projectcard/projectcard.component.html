@@ -1,10 +1,7 @@
-<div class="card text-center" style="width: 18rem;">
-    <div class="card-body btn btn-light">
-        <h5 class="card-title font-weight-bold">{{project?.title}}</h5>
-
-        <p class="card-text">Fecha de inicio: {{project?.dateStart}}</p>
-        <p class="card-text">Fecha de fin: {{project?.dateEnd}}</p>
-
-
+<div class="shadow p-3 btn btn-dark mt-3 " style="max-width: 18rem;">
+    <div class="text-center font-weight-bold"><h5>{{project!.title}}</h5></div>
+    <div>
+        <p class="text-center h6">Fecha de inicio: {{project!.dateStart?.date}}</p>
+        <p class="text-center h6">Fecha de fin: {{project!.dateEnd?.date}}</p>
     </div>
 </div>

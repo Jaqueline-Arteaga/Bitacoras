@@ -1,7 +1,7 @@
-import { Activity } from "../Activity/activity";
+import { User } from "../User/user";
 
 export class Area {
     idArea?:number;
-    name?:string;
-    activities?:Set<Activity>;
+    description?:string;
+    userss?:Set<User>;
 }

@@ -1,0 +1,42 @@
+<app-header [user]="user"></app-header>
+<div class="d-flex justify-content-between">
+    <app-sidebar></app-sidebar>
+    <div class="container p-5">
+        <h1>{{project?.title}}</h1>
+
+        <div class="row bg-dark d-flex justify-content-between mb-3">
+            <div>
+                <button type="button" class="btn btn-dark">Editar Proyecto 🐈</button>
+                <button type="button" class="btn btn-dark">Eliminar Proyecto ☠</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-7">
+                <div class="row shadow p-3 mb-5 bg-white rounded">
+                    <h4>Acerca del proyecto</h4>
+                    {{project?.description}}
+                </div>
+                <div class="row shadow p-3 mb-5 bg-white rounded">
+                    <h4>Estadisticas del proyecto</h4>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4">
+                <div class="row shadow p-3 mb-5 bg-white rounded">
+                    <h4>Lenguajes</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+                <div class="row shadow p-3 mb-5 bg-white rounded">
+                    Equipo
+                    <ul>
+                        <li>BabyKoopa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

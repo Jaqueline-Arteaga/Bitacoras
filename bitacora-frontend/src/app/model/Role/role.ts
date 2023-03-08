@@ -1,7 +1,7 @@
-import { ProjectManager } from "../ProjectManager/project-manager";
+import { ProjectUser } from "../ProjectUser/project-user";
 
 export class Role {
     idRole?:number;
     description?:string;
-    projectsManager?:Set<ProjectManager>;    
+    projectsUser?:Set<ProjectUser>;    
 }

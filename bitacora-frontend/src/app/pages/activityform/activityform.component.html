@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class="form container">
+    <h1>Nueva actividad</h1>
+<form method="post"  >
+    <div class="row shadow p-5 mt-5">
+        <div class="col-6">
+            <div class="row form-group mb-3">
+                <label for="name">Nombre de la actividad</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="activity!.name" placeholder="Ingrese el nombre de la actividad">
+            </div>
+            
+            <div class="row form-group mb-3">
+                <label for="description">Descripcion</label>
+                <textarea class="form-control" id="description" name="description" [(ngModel)]="activity!.description " placeholder="Escribe una descripción de la actividad"
+                    rows="2"></textarea>
+            </div>
+            <!--
+            <div class="row form-group mb-3">
+                <label for="involucrados">Involucrados</label>
+                <input type="Involucrados" class="form-control" id="involucrados" placeholder="Ingrese a los involucrados">
+            </div>
+            -->
+            <div class="row form-group mb-3">
+                <label for="workingHours">Tiempo</label>
+                <input type="number" class="form-control" id="workingHours" name="workingHours"
+                    [(ngModel)]="activity!.workingHours" placeholder="Ingrese el tiempo">
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5">
+
+        
+            <div class="row mb-3">
+                <div class="col form-group">
+                    <label for="startDate">Fecha de inicio</label>
+                    <input type="date" class="form-control" id="dateStart" name="dateStart"
+                        [(ngModel)]="activity!.date">
+                </div>
+                <div class="col form-group">
+                    <label for="date">Fecha de fin</label>
+                    <input type="date" class="form-control" id="dateEnd" name="dateEnd" [(ngModel)]="activity!.date">
+                </div>
+                <div>
+                    <label for="area">Area</label>
+                    <select type="Area" class="form-control" id="area">
+                        <option 
+                          *ngFor="let opt of area"
+                          [selected]="opt === dropDown"
+                          [value]="opt"
+                        >
+                          {{ opt }}
+                        </option>
+                      </select>
+                </div>
+            </div>
+            <div class="row mb-3" *ngIf="!activity?.idActivity else edit">
+                <div class="col"><button type="submit" (click)="create()" class="btn btn-dark mb-2">Crear</button></div>
+            </div>
+                
+        </div>
+        <ng-template #edit>
+            <label for="notes">Notas</label>
+            <div class="col"><textarea class="form-control" id="notes" name="notes" [(ngModel)]="activity!.notes " placeholder="Escribe las notas de la actividad"
+                rows="1"></textarea></div>
+            <div class="col"><button type="submit" (click)="delete()" class="btn btn-dark mb-2">Eliminar</button></div>
+            <div class="col"><button type="submit" (click)="update()" class="btn btn-dark mb-2">Actualizar</button></div>
+        </ng-template>
+    </div>
+</form>
+</div>

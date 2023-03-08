@@ -1,49 +1,16 @@
-<nav class="navbar bg-body-tertiary navbar-dark bg-dark">
-  <div class="container-fluid">
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-      aria-controls="offcanvasDarkNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-      aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu de Navegación</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <div class="offcanvas-body">
-
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" [routerLink]="['/binnacle/projects']">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/binnacle/project']">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/binnacle/activity']">Bitacora</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/binnacle/activities']">Actividades</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/binnacle/user']">Configuración</a>
-            </li>
-          </ul>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <h3 class="text-light">{{user!.name}} {{user?.pLastName}} {{user?.mLastName}}</h3>
+        <a class="navbar-brand " [routerLink]="['/projects']">
+            <img src="assets/img/header/neoris.png" alt="neoris" height="30rm">
+        </a>
+        <div  class="d-flex justify-content-between">
+            <a class="btn btn-dark">
+                <img src="assets/img/header/contacts.png" alt="" height="30rm">
+            </a>
+            <a class="btn btn-dark" (click)="logout()">
+                <img src="assets/img/header/logout.png" alt="" height="30rm">
+            </a>
         </div>
-      </div>
     </div>
-    
-
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/header/neoris.png" alt="" height="30rm">
-    </a>
-    <div style="width: 5rem;" class="d-flex justify-content-between">
-      <a href="#">
-        <img src="assets/img/header/contacts.png" alt="" height="30rm">
-      </a>
-      <a href="#">
-        <img src="assets/img/header/logout.png" alt="" (click)="logout()" height="30rm">
-      </a>
-    </div>
-  </div>
 </nav>

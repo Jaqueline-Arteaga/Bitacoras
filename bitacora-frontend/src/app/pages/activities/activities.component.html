@@ -1,11 +1,25 @@
-<app-header></app-header>
-<div class="container">
-    <h1>Actividades</h1>
-    <div class="card text-center mt-3" style="width: 18rem;">
-        <a [routerLink]="['/binnacle/activity']" class="btn btn-light">
-            Nueva actividad
-            <img src="assets/img/projects/plus-math.png" width="20rem" alt="">
-        </a>
-    </div>
-    <app-activityoverview [activities]="activities"></app-activityoverview>
+<app-header [user]="user"></app-header>
+<div class="d-flex justify-content-between">
+    <app-sidebar></app-sidebar>
+    <div class="container  p-5">        
+        <h1>Actividades</h1>
+        <div class="bg-dark d-flex justify-content-between">
+            <div>
+                <button type="button" class="btn btn-dark" [routerLink]="['/activityform']">Nueva actividad +</button>
+                <button type="button" class="btn btn-dark">Mas reciente</button>
+                <button type="button" class="btn btn-dark">Hoy</button>
+                <button type="button" class="btn btn-dark">Semanal</button>
+                <button type="button" class="btn btn-dark">Mensual</button>
+            </div>
+
+            <div>
+                <form action="get">
+                    <input type="date" name="date1" [(ngModel)]="dates.date1">
+                    <input type="date" name="date2" [(ngModel)]="dates.date2">
+                    <button type="submit" class="btn btn-dark" (click)="filtrar()">Filtrar</button>
+                </form>
+            </div>            
+        </div>
+        <app-activityelement [activities]="activities"></app-activityelement>
+    </div>    
 </div>
